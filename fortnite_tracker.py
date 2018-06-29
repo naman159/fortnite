@@ -24,10 +24,13 @@ class FortniteSpider(scrapy.Spider):
 
         games = response.xpath('//div[@class="col-3 col-md-2 d-none d-md-block"]/text()').extract()
 
-
-
         item = dict({'Name':namee, 'Wins':wins, 'Winrate': winrate, 'k/d': kd, 'Games':games})
 
-        #print(data)
-
         yield item
+
+        next_page_url = response.css('div.ld-pagination > a::attr(href)').extract_first()
+        
+        if next_page_url:
+            next_page_url = response.urljoin(next_page_url)
+            yield scrapy.Request(url = next_page_url, callback = self.parse)
+
