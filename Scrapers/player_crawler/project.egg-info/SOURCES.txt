@@ -1,0 +1,13 @@
+setup.py
+player_crawler/__init__.py
+player_crawler/items.py
+player_crawler/middlewares.py
+player_crawler/pipelines.py
+player_crawler/settings.py
+player_crawler/spiders/__init__.py
+player_crawler/spiders/player_data.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+setup.py
+fortnite_crawler/__init__.py
+fortnite_crawler/items.py
+fortnite_crawler/middlewares.py
+fortnite_crawler/pipelines.py
+fortnite_crawler/settings.py
+fortnite_crawler/spiders/__init__.py
+fortnite_crawler/spiders/fortnite_tracker.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

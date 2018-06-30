@@ -27,7 +27,6 @@ class FortniteSpider(scrapy.Spider):
 
         games = response.xpath('//div[@class="col-3 col-md-2 d-none d-md-block"]/text()').extract()
 
-
         for i in range(15):
             item = {
                 'Name':namee[i],
@@ -38,11 +37,12 @@ class FortniteSpider(scrapy.Spider):
             }
             yield item
 
-        #item = dict({'Name':namee, 'Wins':wins, 'Winrate': winrate, 'k/d': kd, 'Games':games})
-
         next_page_url = response.css('div.ld-pagination > a::attr(href)').extract_first()
         
-        if int(next_page_url[35:]) <= 10:
+        if int(next_page_url[35:]) <= 40:
             next_page_url = response.urljoin(next_page_url)
             yield scrapy.Request(url = next_page_url, callback = self.parse)
+
+
+    
 
