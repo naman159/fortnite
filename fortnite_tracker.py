@@ -30,7 +30,7 @@ class FortniteSpider(scrapy.Spider):
 
         next_page_url = response.css('div.ld-pagination > a::attr(href)').extract_first()
         
-        if next_page_url:
+        if int(next_page_url[35:]) <= 200:
             next_page_url = response.urljoin(next_page_url)
             yield scrapy.Request(url = next_page_url, callback = self.parse)
 
