@@ -1,1 +1,2 @@
-In works yet! A Fortnite Leaderboard Project which analyses top players and the dynamics of the leaderboard on a daily basis.
+Analysis and correlation on the data from the top of the leaderboard between the various elements. 
+I plan on converting this skeleton into a web client which shall be able to sync data and anal;yse it on a regular basis.
